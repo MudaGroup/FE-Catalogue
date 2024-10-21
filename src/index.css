@@ -1,0 +1,908 @@
+:root {
+  --primary-color: #004AAD;
+  --secondary-color: #000;
+  --background-color-1: #03346E; 
+  --background-color-2: #f5f5f5;
+  --text-color: #3C3D37;
+  --font-text: 18px;
+  --font-title: 28px;
+  --font-page: 2.5rem;
+}
+
+/* Contoh Penggunaan */
+/* .button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-size: var(--font-small);
+  font-size: var(--font-medium);
+  font-size: var(--font-large);
+} */
+
+
+/* index.css */
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--background-color-2);
+}
+
+.header-box {
+  width: 100%;
+  margin: 0 auto; /* Center alignment */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.carousel {
+  height: 410px;
+  min-width: 1480px;
+  overflow: hidden; /* Menghilangkan overflow jika diperlukan */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .header-box {
+    max-width: 100%; /* Memperluas header-box pada layar kecil */
+    margin: 0 10px; /* Tambahkan margin agar tidak terlalu memenuhi layar */
+  }
+
+  .carousel {
+    height: 200px; /* Sesuaikan tinggi carousel pada layar kecil */
+    min-width: 100%; /* Pastikan carousel memenuhi layar pada perangkat kecil */
+  }
+
+  .carousel-item img {
+    max-height: 300px; /* Sesuaikan tinggi gambar pada layar kecil */
+    width: 100%; /* Memastikan gambar mengambil lebar penuh */
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-box {
+    max-width: 100%; /* Pastikan lebar header-box di layar kecil */
+    margin: 0 5px; /* Tambahkan sedikit margin pada layar yang lebih kecil */
+  }
+
+  .carousel {
+    height: 120px; /* Sesuaikan tinggi carousel pada layar yang lebih kecil */
+    min-width: 100%; /* Pastikan carousel memenuhi layar pada perangkat kecil */
+  }
+
+  .carousel-item img {
+    max-height: 250px; /* Sesuaikan tinggi gambar pada layar lebih kecil */
+    width: 100%; /* Pastikan gambar mengambil lebar penuh */
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+  }
+
+  .homepage {
+    padding: 10px; /* Kurangi padding untuk layar kecil */
+  }
+}
+
+/* index.css */
+
+/* Kontainer Utama Halaman Katalog */
+.catalog-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: var(--background-color-2);
+}
+
+/* Header Katalog */
+.catalog-header {
+  font-size: var(--font-page);
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.catalog-list {
+  width: 1300px;
+  height: auto;
+}
+
+.catalog-item {
+  border: 2px solid #ddd; /* Border untuk setiap item katalog */
+  border-radius: 8px; /* Membuat sudut border melengkung */
+  padding: 16px;
+  margin-bottom: 20px; /* Menambahkan ruang antara item katalog */
+  background-color: #ffffff; /* Warna latar belakang */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan */
+  transition: box-shadow 0.3s ease; /* Transisi untuk efek hover */
+}
+
+/* Judul Sub-Katalog */
+.catalog-title {
+  font-size: var(--font-title);
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+/* Gambar Katalog */
+.catalog-item img {
+  width: 1400px;
+  height: 960px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Deskripsi Katalog */
+.catalog-item p {
+  font-size: var(--font-text);
+  color: var(--text-color);
+  margin-bottom: 25px;
+  line-height: 1.6;
+  justify-content: center;
+  text-align: center; /* Rata tengah teks */
+  margin-left: 20px; /* Memastikan elemen terpusat secara horizontal */
+  margin-right: 20px; /* Memastikan elemen terpusat secara horizontal */
+}
+
+.catalog-item a {
+  align-items: center;
+  justify-content: center;
+  background-color: #25d366;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Media Query untuk ukuran layar 768px */
+@media (max-width: 768px) {
+  .catalog-list {
+    width: 100%; /* Mengatur lebar menjadi 100% */
+    padding: 0 10px; /* Menambahkan padding */
+  }
+
+  .catalog-item img {
+    width: 100%; /* Mengatur lebar gambar menjadi 100% */
+    height: auto; /* Mengatur tinggi gambar secara otomatis */
+  }
+
+  .catalog-item p {
+    font-size: var(--font-text); /* Menyesuaikan ukuran font */
+    margin-left: 10px; /* Mengurangi margin */
+    margin-right: 10px; /* Mengurangi margin */
+  }
+
+  .catalog-item a {
+    font-size: 1rem; /* Menyesuaikan ukuran font */
+  }
+}
+
+/* Media Query untuk ukuran layar 480px */
+@media (max-width: 480px) {
+  .catalog-header {
+    font-size: 1.5rem; /* Menyesuaikan ukuran font header */
+  }
+
+  .catalog-title {
+    font-size: 1.2rem; /* Menyesuaikan ukuran font judul sub-katalog */
+  }
+
+  .catalog-item {
+    padding: 12px; /* Mengurangi padding */
+  }
+
+  .catalog-item a {
+    padding: 6px 12px; /* Mengurangi padding tombol */
+    font-size: 0.9rem; /* Menyesuaikan ukuran font */
+  }
+}
+
+
+
+
+
+/* Container utama halaman produk */
+.product-page {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--background-color-2); /* Warna background halaman */
+  min-height: 100vh; /* Supaya halaman selalu penuh, minimal setinggi viewport */
+}
+
+/* Styling untuk judul kategori */
+.product-page h1 {
+  font-size: var(--font-page);
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 40px;
+}
+
+/* Container untuk card */
+.card-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Card individual */
+.card-category > div {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px; /* Lebar maksimum untuk tiap card */
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.card-category > div:hover {
+  transform: translateY(-5px); /* Animasi hover agar card terangkat */
+}
+
+/* Gambar di dalam card */
+.card-img img {
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Bagian tubuh dari card */
+.card-body {
+  padding: 15px;
+}
+
+/* Judul produk */
+.card-title {
+  font-size: var(--font-text);
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+/* Deskripsi produk */
+.card-desc {
+  font-size: 0.7rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Harga produk */
+.card-price {
+  font-size: var(--font-text);
+  font-weight: bold;
+  color: #ff5722;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+/* Tombol Whatsapp */
+.card-body a {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.card-body a:hover {
+  background-color: #1ebe57; /* Warna lebih gelap saat hover */
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+  .card-category {
+      flex-direction: row;
+      align-items: center;
+  }
+
+  .card-category > div {
+      max-width: 43%;
+
+  }
+
+  .product-page h1 {
+      font-size: 2rem;
+  }
+}
+
+/* Media Query untuk layar kecil dengan lebar maksimal 480px */
+@media (max-width: 480px) {
+  /* Container utama halaman produk */
+  .product-page {
+    padding: 0px; /* Mengurangi padding di layar kecil */
+  }
+
+  .product-page h1 {
+    padding-top: 40px;
+  }
+
+  /* Styling untuk judul kategori */
+  .product-page h1 {
+    font-size: 1.5rem; /* Mengurangi ukuran font judul */
+    margin-bottom: 30px;
+  }
+
+  /* Container untuk card */
+  .card-category {
+    gap: 10px; /* Mengurangi jarak antara card */
+    margin: 10px 0; /* Mengurangi margin vertikal */
+    flex-direction: row;
+  }
+
+  /* Card individual */
+  .card-category > div {
+    max-width: 100%; /* Membuat card menyesuaikan lebar layar */
+    width: 46%;
+  }
+
+  /* Gambar di dalam card */
+  .card-img img {
+    width: 100%; /* Gambar akan menyesuaikan lebar card */
+    height: auto; /* Agar gambar tetap proporsional */
+    margin: 0; /* Menghapus margin gambar */
+  }
+
+  /* Judul produk */
+  .card-title {
+    font-size: 0.875rem; /* Ukuran font lebih kecil di layar kecil */
+    margin-bottom: 5px;
+  }
+
+  /* Deskripsi produk */
+  .card-desc {
+    font-size: 0.6rem; /* Ukuran font lebih kecil */
+    padding-left: 15px; /* Mengurangi padding horizontal */
+    padding-right: 15px;
+  }
+
+  /* Harga produk */
+  .card-price {
+    font-size: 0.7rem; /* Ukuran font harga lebih kecil */
+    margin-bottom: 0px;
+    margin-top: 15px;
+  }
+
+  /* Tombol Whatsapp */
+  .card-body a {
+    padding: 5px 12px; /* Mengurangi padding tombol */
+    font-size: 0.5rem; /* Mengurangi ukuran font tombol */
+  }
+}
+
+.product-list {
+  display: grid; /* Menggunakan grid untuk tata letak */
+  grid-template-columns: repeat(4, 1fr); /* Membuat 4 kolom yang sama lebar */
+  gap: 20px; /* Spasi antara item produk */
+  margin: 20px 0; /* Margin di atas dan bawah */
+  margin-left: 75px; /* Margin kiri */
+  margin-right: 100px; /* Margin kanan */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(3, 1fr); /* Mengubah menjadi 3 kolom */
+    margin-left: 0px;
+    margin-right: 20px; /* Mengurangi margin kanan */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr); /* Mengubah menjadi 2 kolom */
+    margin-left: 0px; /* Mengurangi margin kiri */
+    margin-right: 0px; /* Mengurangi margin kanan */
+    gap: 0px;
+    padding-left: 20px;
+    padding-right: 5px;
+  }
+}
+
+
+/* category-list */
+.category-list {
+  margin-bottom: 20px; /* Spasi di bawah daftar kategori */
+}
+
+/* Tombol kategori */
+.category-button {
+  background-color: #007bff; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  border: none; /* Menghilangkan border */
+  padding: 5px 15px; /* Spasi di dalam tombol */
+  margin-right: 10px; /* Spasi di antara tombol */
+  margin-bottom: 10px; /* Spasi di bawah tombol untuk pembungkus */
+  cursor: pointer; /* Tanda kursor saat hover */
+  border-radius: 5px; /* Sudut yang membulat */
+  transition: background-color 0.3s; /* Transisi saat hover */
+  font-size: 0.9rem; /* Ukuran font standar */
+}
+
+/* Hover effect */
+.category-button:hover {
+  background-color: #0056b3; /* Warna saat hover */
+}
+
+/* Warna aktif untuk tombol kategori */
+.category-button.active {
+  background-color: #0056b3; /* Warna latar belakang untuk kategori yang aktif */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .category-button {
+    font-size: 0.8rem; /* Ukuran font lebih kecil pada layar kecil */
+    padding: 4px 10px; /* Mengurangi padding tombol */
+    margin-right: 8px; /* Mengurangi margin kanan */
+  }
+}
+
+@media (max-width: 480px) {
+  .category-button {
+    font-size: 0.75rem; /* Ukuran font lebih kecil pada layar sangat kecil */
+  }
+}
+
+
+
+/* Style untuk halaman Profile */
+.Profile-Page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.Profile-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Style untuk body profile */
+.profile-body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 88%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* text-align: center; */
+}
+
+/* Style untuk deskripsi profil */
+.profile-desc, .profile-desc1 {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  /* margin-bottom: 20px; */
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* Style untuk list kategori */
+.profile-list {
+  /* list-style-type: none; */
+  padding-left: 90px;
+  margin: 20px 0;
+}
+
+.profile-list li {
+  /* display: inline-block; */
+  margin-right: 15px;
+  font-size: 1.1rem;
+  /* color: #007bff; */
+  /* cursor: pointer; */
+  /* transition: color 0.3s ease; */
+}
+
+/* .profile-list li:hover {
+  color: #0056b3;
+} */
+
+/* Tambahan styling untuk layout dan responsivitas */
+@media (max-width: 768px) {
+  .profile-body {
+      padding-left: 0px;
+      padding-right: 0px;
+      /* max-width: 100%; */
+      width: 100%;
+  }
+
+  .Profile-title {
+    font-size: 2rem;
+  }
+
+  /* Style untuk deskripsi profil */
+.profile-desc, .profile-desc1 {
+  font-size: 1rem;
+}
+
+  .profile-list {
+    padding-left: 4rem;
+    padding-right: 40px;
+    margin-top: 0;
+  }
+
+  .profile-list li {
+      display: block;
+      margin: 10px 0;
+      font-size: 1rem;
+  }
+}
+
+/* Media Query untuk layar kecil dengan lebar maksimal 480px */
+@media (max-width: 480px) {
+  /* Style untuk halaman Profile */
+  .Profile-Page {
+    padding: 15px; /* Mengurangi padding pada halaman */
+  }
+
+  /* Style untuk judul profile */
+  .Profile-title {
+    font-size: 1.5rem; /* Mengurangi ukuran font untuk judul */
+    margin-bottom: 15px; /* Mengurangi margin bawah judul */
+  }
+
+  /* Style untuk body profile */
+  .profile-body {
+    width: 100%; /* Lebar body profil menyesuaikan lebar layar */
+    padding: 10px; /* Mengurangi padding untuk layar kecil */
+    box-shadow: none; /* Menghapus efek bayangan untuk kesederhanaan */
+    border-radius: 0; /* Menghapus border radius di layar kecil */
+  }
+
+  /* Style untuk deskripsi profil */
+  .profile-desc, .profile-desc1 {
+    font-size: 0.75rem; /* Mengurangi ukuran font untuk deskripsi */
+    padding-left: 10px; /* Mengurangi padding kiri dan kanan */
+    padding-right: 10px;
+  }
+
+  .profile-list {
+    padding-left: 2rem;
+    padding-right: 10px;
+    margin-top: 0;
+  }
+
+
+  .profile-list li {
+    font-size: 0.75rem; /* Mengurangi ukuran font untuk item list */
+    margin-right: 0px; /* Mengurangi jarak antar item */
+  }
+}
+
+/* Styling dasar untuk footer */
+.footer {
+  background-color: var(--secondary-color); /* Warna latar belakang */
+  color: white; /* Warna teks */
+  padding: 5px; /* Padding untuk ruang di sekitar konten */
+  text-align: center; /* Rata tengah teks */
+  position: relative; /* Posisi relatif */
+  width: 100%; /* Lebar penuh */
+  border-top-left-radius: 10px; /* Sudut membulat */
+  border-top-right-radius: 10px; /* Sudut membulat */
+  bottom: 0; /* Posisi di bagian bawah halaman */
+}
+
+/* Container utama aplikasi */
+.App {
+  display: flex; /* Gunakan flexbox */
+  flex-direction: column; /* Susun konten secara vertikal */
+  min-height: 100vh; /* Ambil setidaknya tinggi penuh viewport */
+}
+
+/* Konten utama aplikasi */
+.main-content {
+  flex: 1; /* Konten utama mengambil sisa ruang yang tersedia */
+}
+
+/* Container untuk konten footer */
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 45px; /* Jarak antar elemen */
+}
+
+/* Styling untuk link di dalam footer */
+.footer-content a {
+  color: white; /* Warna teks link */
+  text-decoration: none; /* Hilangkan garis bawah link */
+  font-size: 1.3rem; /* Ukuran teks */
+  display: flex;
+  align-items: center;
+  gap: 7px; /* Jarak antara ikon dan teks */
+  padding: 10px; /* Padding di sekitar elemen */
+  transition: background-color 0.3s ease; /* Transisi warna saat hover */
+  border-radius: 5px; /* Sudut membulat */
+}
+
+/* Hover effect untuk link */
+.footer-content a:hover {
+  background-color: #1D1D1D; /* Warna saat link dihover */
+  color: #25D366; /* Warna hijau untuk ikon dan teks */
+}
+
+/* Styling khusus untuk link WhatsApp */
+.footer-content .whatsapp:hover {
+  color: #25D366; /* Warna hijau khas WhatsApp */
+}
+
+/* Styling khusus untuk link Telepon */
+.footer-content .phone:hover {
+  color: #00BFFF; /* Warna biru khas telepon */
+}
+
+/* Styling khusus untuk link Email */
+.footer-content .email:hover {
+  color: #FFA500; /* Warna oranye untuk email */
+}
+
+/* Ikon di dalam footer */
+.footer-content a svg {
+  font-size: 1.2rem; /* Ukuran ikon */
+}
+
+/* Styling untuk layar dengan lebar maksimal 768px */
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px; /* Padding lebih kecil */
+  }
+
+  .footer-content {
+    flex-direction: row; /* Ubah arah flex menjadi kolom */
+    gap: 20px; /* Jarak antar elemen lebih kecil */
+  }
+
+  /* Ukuran teks lebih kecil untuk layar 768px */
+  .footer-content a {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  /* Ukuran ikon lebih kecil untuk layar 768px */
+  .footer-content a svg {
+    font-size: 1rem;
+  }
+}
+
+/* Styling untuk layar dengan lebar maksimal 480px */
+@media (max-width: 480px) {
+  .footer {
+    padding: 6px; /* Padding lebih kecil */
+  }
+
+  .footer-content {
+    flex-direction: row; /* Ubah arah flex menjadi kolom */
+    gap: 5px; /* Jarak antar elemen lebih kecil */
+  }
+
+  /* Ukuran teks lebih kecil untuk layar 480px */
+  .footer-content a {
+    font-size: 0.55rem;
+    padding: 10px;
+  }
+
+  /* Ukuran ikon lebih kecil untuk layar 480px */
+  .footer-content a svg {
+    font-size: 0.5rem;
+  }
+}
+
+.productcomponent-page {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  padding-left: 95px;
+  padding-right: 90px;
+  text-align: center;
+  background-color: var(--background-color-2); /* Warna background halaman */
+  /* min-height: 100vh; Supaya halaman selalu penuh, minimal setinggi viewport */
+}
+
+.productcomponent-title {
+  font-size: var(--font-page);
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: var(--text-color);
+  /* text-align: center; */
+}
+
+.productcomponent-page .productcomponent-btn{
+  margin-top: 60px;
+}
+
+.productcomponent-page .productcomponent-btn a {
+  background-color: white;
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: var(--text-color);
+  /* font-weight: bold; */
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.productcomponent-page .productcomponent-btn a:hover {
+  background-color: #D8D9DA;
+}
+
+/* Styling untuk item dalam Carousel */
+.react-multi-carousel-item {
+  /* margin-left: 10px; */
+  /* margin-right: 10px; */
+}
+
+/* Styling untuk card produk */
+.productassets-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  max-width: 310px;
+  width: 100%; /* Menggunakan lebar penuh dari container */
+  margin: 15px; /* Memberikan jarak antar card */
+}
+
+/* Styling untuk gambar produk */
+.productassets-img img {
+  width: 280px; /* Mengisi lebar card */
+  height: 200px; /* Menentukan tinggi gambar */
+  object-fit: cover; /* Menjaga proporsi gambar */
+  border-radius: 8px;
+  margin-bottom: 15px; /* Jarak antara gambar dan konten berikutnya */
+}
+
+/* Styling untuk body card produk */
+.productassets-body {
+  padding: 0 10px;
+}
+
+/* Styling untuk judul produk */
+.productassets-title {
+  font-size: 1.2rem; /* Ukuran font untuk judul */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Styling untuk harga produk */
+.productassets-price {
+  font-size: var(--font-text);
+  color: #ff5722; /* Warna hijau untuk harga */
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Styling untuk tautan WhatsApp */
+.productassets-body a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25d366; /* Warna latar belakang WhatsApp */
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.productassets-body a:hover {
+  background-color: #20b856; /* Warna saat hover */
+}
+
+.productassets-body a svg {
+  margin-right: 8px; /* Jarak antara ikon dan teks */
+  font-size: 1.2rem;
+}
+
+/* Responsif untuk layar 768px */
+@media (max-width: 768px) {
+  .productcomponent-page {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+  .productassets-card {
+    width: 100%; /* Card memenuhi lebar container */
+  }
+
+  .productassets-title {
+    font-size: 1rem; /* Ukuran font judul lebih kecil */
+  }
+
+.productassets-img img {
+  width: 182px; /* Mengisi lebar card */
+  height: 150px; /* Menentukan tinggi gambar */
+  border-radius: 2px;
+}
+  .productassets-price {
+    font-size: 0.9rem; /* Ukuran font harga lebih kecil */
+  }
+
+  .productassets-body a {
+    padding: 8px 12px; /* Ukuran tombol lebih kecil */
+    font-size: 0.9rem;
+  }
+
+  .react-multi-carousel-item {
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+}
+
+/* Responsif untuk layar 480px */
+@media (max-width: 480px) {
+  .productcomponent-title {
+    font-size: 1.5rem;
+  }
+
+  .productassets-card {
+    max-width: 90%; /* Card memenuhi lebar container */
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .productassets-title {
+    font-size: 0.9rem; /* Ukuran font judul lebih kecil */
+  }
+
+  .productassets-img img {
+    width: 142px; /* Mengisi lebar card */
+    height: 110px; /* Menentukan tinggi gambar */
+    border-radius: 2px;
+  }
+
+  .productassets-price {
+    font-size: 0.8rem; /* Ukuran font harga lebih kecil */
+  }
+
+  .productassets-body a {
+    padding: 6px 10px; /* Ukuran tombol lebih kecil */
+    font-size: 0.8rem;
+  }
+
+  .productassets-body a svg {
+    margin-right: 5px; /* Jarak ikon lebih kecil */
+    font-size: 1rem;
+  }
+}

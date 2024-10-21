@@ -1,0 +1,657 @@
+.Admin-page {
+    text-align: center; /* Pusatkan teks */
+    font-size: 2rem; /* Ukuran font untuk judul */
+    margin-bottom: 20px; /* Margin bawah untuk jarak dari elemen berikutnya */
+    color: #343a40; /* Warna teks judul */
+    margin-top: 20px;
+}
+
+.admin-component {
+    display: flex;
+    justify-content: flex-end;
+    /* flex-direction: column; */
+    align-items: center;
+    padding: 10px 120px;
+    /* background-color: #f8f9fa; Warna latar belakang */
+    /* border: 1px solid #dee2e6; Garis batas */
+    /* border-radius: 5px; Sudut melengkung */
+}
+
+
+.btn-logout {
+    padding: 5px 10px;
+    background-color: #dc3545; /* Warna latar belakang tombol */
+    color: #fff; /* Warna teks tombol */
+    border: none; /* Tanpa garis batas */
+    border-radius: 5px; /* Sudut melengkung tombol */
+    cursor: pointer;
+}
+
+.btn-logout:hover {
+    background-color: #c82333; /* Warna latar belakang tombol saat hover */
+}
+
+/* Media query untuk perangkat dengan lebar maksimum 768px (tablet) */
+@media (max-width: 768px) {
+    .admin-component {
+        padding: 10px 25px 0px 25px;
+    }
+    
+    .btn-logout {
+        font-size: 14px; /* Mengurangi ukuran font */
+    }
+}
+
+/* Media query untuk perangkat dengan lebar maksimum 480px (mobile) */
+@media (max-width: 480px) {
+    .admin-component {
+        padding: 10px 25px 0px 25px;
+    }
+
+    .btn-logout {
+        font-size: 10px; /* Ukuran font lebih besar untuk keterbacaan */
+    }
+}
+
+
+/* AdminSlide.css */
+
+/* Gaya umum untuk halaman Admin Slide */
+.Admin-slide-page {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid grey;
+    max-width: 1300px; /* Membatasi lebar maksimal */
+    margin-left: auto; /* Otomatis mengatur posisi tengah */
+    margin-right: auto; /* Otomatis mengatur posisi tengah */
+}
+
+.Admin-slide-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.Admin-slide-page .Admin-slide-form p {
+    color: red;
+    font-size :10px;
+}
+
+.Admin-slide-input {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.Admin-slide-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.Admin-slide-btn:hover {
+    background-color: #0056b3;
+}
+
+.slide-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.slide {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.333% - 20px); /* Lebar slide (3 dalam satu baris) */
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.Admin-slide-img {
+    width: 100%;
+    height: 100px;
+}
+
+.Admin-slide-title {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Admin-slide-btn-delete {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.Admin-slide-btn-delete:hover {
+    background-color: #c82333;
+}
+
+/* Responsif untuk layar 768px (tablet) */
+@media (max-width: 768px) {
+    .Admin-slide-page{
+        max-width: 700px; /* Membatasi lebar maksimal */
+    }
+
+    .slide {
+        width: calc(50% - 20px); /* 2 slide per baris */
+    }
+
+    .Admin-slide-title {
+        font-size: 14px; /* Ukuran font lebih kecil */
+    }
+}
+
+/* Responsif untuk layar 480px (smartphone) */
+@media (max-width: 480px) {
+    .Admin-slide-page{
+        max-width: 350px; /* Membatasi lebar maksimal */
+    }
+
+    .slide {
+        width: 100%; /* Satu slide per baris */
+    }
+
+    .Admin-slide-title {
+        font-size: 12px; /* Ukuran font lebih kecil */
+    }
+
+    .Admin-slide-img {
+        height: 80px; /* Tinggi gambar lebih kecil */
+    }
+
+    .Admin-slide-btn-delete {
+        padding: 5px 8px; /* Sedikit memperkecil padding tombol delete */
+        bottom: 5px; /* Jarak bawah lebih kecil */
+        right: 5px; /* Jarak kanan lebih kecil */
+    }
+}
+
+/* Admin.css */
+
+/* Container utama */
+.Admin-catalog-page {
+    /* max-width: 1000px; */
+    max-width: 1300px; /* Membatasi lebar maksimal */
+    margin-left: auto; /* Otomatis mengatur posisi tengah */
+    margin-right: auto; /* Otomatis mengatur posisi tengah */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Form catalog */
+.Admins-catalog-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.Admins-catalog-form div {
+    margin-bottom: 15px;
+}
+
+.Admins-catalog-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.Admins-catalog-form input,
+.Admins-catalog-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.Admins-catalog-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.Admins-catalog-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Admins-catalog-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Gambar preview */
+.Admin-catalog-img img {
+    margin-top: 10px;
+    display: block;
+    max-width: 100px;
+    height: auto;
+    border-radius: 4px;
+}
+.Admin-catalog-img p{
+    color: red;
+    font-size: 10px;
+}
+
+
+/* Tabel katalog */
+.Admin-catalog-preview {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+.Admin-catalog-preview table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.Admin-catalog-preview th,
+.Admin-catalog-preview td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.Admin-catalog-preview th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.Admin-catalog-preview img {
+    max-width: 50px;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Tombol Delete */
+.Admin-catalog-preview button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.Admin-catalog-preview button:hover {
+    background-color: #c82333;
+}
+
+/* CSS Umum Tetap Sama */
+
+/* Responsif untuk ukuran layar 768px ke bawah */
+@media screen and (max-width: 768px) {
+    /* Container utama */
+    .Admin-catalog-page {
+        max-width: 700px; /* Menggunakan 100% dari lebar layar */
+        padding: 15px;
+    }
+
+    /* Form catalog */
+    .Admins-catalog-form {
+        padding: 15px; /* Mengurangi padding */
+        border-radius: 6px;
+    }
+
+    .Admins-catalog-form input,
+    .Admins-catalog-form textarea {
+        padding: 8px; /* Ukuran input yang lebih kecil */
+        font-size: 14px; /* Font yang lebih kecil */
+    }
+
+    .Admins-catalog-form button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Gambar preview */
+    .Admin-catalog-img img {
+        max-width: 80px; /* Gambar sedikit lebih kecil */
+    }
+
+    /* Tabel katalog */
+    .Admin-catalog-preview table {
+        font-size: 14px; /* Ukuran font yang lebih kecil untuk tabel */
+    }
+
+    .Admin-catalog-preview img {
+        max-width: 40px; /* Gambar dalam tabel lebih kecil */
+    }
+}
+
+/* Responsif untuk ukuran layar 480px ke bawah */
+@media screen and (max-width: 480px) {
+    /* Container utama */
+    .Admin-catalog-page {
+        max-width: 350px; /* Membatasi lebar maksimal */
+        padding: 10px; /* Lebih sedikit padding pada layar yang lebih kecil */
+    }
+
+    /* Form catalog */
+    .Admins-catalog-form {
+        padding: 10px; /* Mengurangi padding lebih lanjut */
+    }
+
+    .Admins-catalog-form input,
+    .Admins-catalog-form textarea {
+        padding: 6px;
+        font-size: 12px; /* Font lebih kecil untuk layar yang lebih kecil */
+    }
+
+    .Admins-catalog-form button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    /* Gambar preview */
+    .Admin-catalog-img img {
+        max-width: 60px; /* Ukuran gambar lebih kecil */
+    }
+
+    /* Tabel katalog */
+    .Admin-catalog-preview table {
+        font-size: 12px; /* Font yang lebih kecil untuk tabel */
+    }
+
+    .Admin-catalog-preview img {
+        max-width: 30px; /* Gambar dalam tabel lebih kecil */
+    }
+
+    /* Tombol Delete lebih kecil */
+    .Admin-catalog-preview button {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+
+
+
+/* Admin.css */
+
+.Admins-product-page {
+    margin-top: 50px; /* Mengatur margin otomatis untuk pusat */
+    margin-bottom: 50px; /* Mengatur margin otomatis untuk pusat */
+    padding: 20px; /* Ruang di dalam kontainer */
+    background-color: #f8f9fa; /* Warna latar belakang terang */
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+    border: 1px solid grey;
+    max-width: 1300px; /* Membatasi lebar maksimal */
+    margin-left: auto; /* Otomatis mengatur posisi tengah */
+    margin-right: auto; /* Otomatis mengatur posisi tengah */
+}
+
+.Admins-product-form {
+    display: flex; /* Menampilkan elemen dalam baris */
+    flex-direction: column; /* Mengatur arah kolom */
+    gap: 15px; /* Jarak antar elemen form */
+    margin-bottom: 30px; /* Jarak bawah untuk memisahkan form dari daftar produk */
+}
+
+.Admins-product-form div {
+    display: flex; /* Menampilkan label dan input dalam baris */
+    flex-direction: column; /* Mengatur arah kolom */
+}
+
+label {
+    font-weight: bold; /* Menebalkan teks label */
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    padding: 10px; /* Ruang dalam input */
+    border: 1px solid #ced4da; /* Garis batas */
+    border-radius: 4px; /* Sudut melengkung */
+    font-size: 14px; /* Ukuran font */
+}
+
+textarea {
+    resize: vertical; /* Mengizinkan pengguna untuk mengubah ukuran hanya secara vertikal */
+}
+
+button {
+    padding: 10px; /* Ruang dalam tombol */
+    border: none; /* Menghilangkan batas default */
+    border-radius: 4px; /* Sudut melengkung */
+    background-color: #dc3545; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    cursor: pointer; /* Mengubah cursor saat hover */
+    transition: background-color 0.3s; /* Animasi untuk transisi warna */
+}
+
+button:hover {
+    background-color: #c82333; /* Warna saat hover */
+}
+
+.Admins-product-form button{
+    background-color: #007bff;
+}
+
+.Admins-product-existing-category {
+    margin-top: 20px; /* Jarak atas untuk kategori yang sudah ada */
+}
+
+.Admins-product-existing-category ul li button{
+    background-color: #dc3545;
+}
+
+.Admins-product-existing-category ul li button:hover{
+    background-color: #c82333;
+}
+
+.Admins-product-existing-category h3 {
+    margin-bottom: 10px; /* Jarak bawah untuk judul kategori */
+}
+
+.Admins-product-existing-category ul {
+    list-style: none; /* Menghilangkan bullet point */
+    padding: 0; /* Menghilangkan padding default */
+}
+
+.Admins-product-existing-category li {
+    display: flex; /* Menampilkan kategori dan tombol delete dalam baris */
+    justify-content: space-between; /* Menyebar elemen dengan jarak yang sama */
+    align-items: center; /* Memastikan elemen berada pada garis tengah */
+    margin-bottom: 5px; /* Jarak bawah antar kategori */
+}
+
+.Admins-product-table {
+    margin-top: 30px; /* Jarak atas untuk tabel produk */
+}
+
+.Admins-product-table table {
+    width: 100%; /* Lebar tabel 100% dari kontainer */
+    border-collapse: collapse; /* Menghilangkan jarak antara sel */
+}
+
+.Admins-product-table th,
+.Admins-product-table td {
+    border: 1px solid #dee2e6; /* Garis batas pada sel */
+    padding: 10px; /* Ruang dalam sel */
+    text-align: left; /* Rata kiri untuk teks */
+}
+
+.Admins-product-table th {
+    background-color: #e9ecef; /* Warna latar belakang untuk header tabel */
+}
+
+.Admins-product-img p, .Admins-product-price p{
+    color: red;
+    font-size :10px;
+}
+img {
+    max-width: 100%; /* Memastikan gambar tidak melebihi lebar sel */
+    height: auto; /* Tinggi otomatis agar proporsi tetap */
+}
+
+/* Responsif untuk layar 768px */
+@media (max-width: 768px) {
+    .Admins-product-page{
+        max-width: 700px; /* Membatasi lebar maksimal */
+    }
+
+    .Admins-product-form {
+        gap: 10px; /* Jarak antar elemen form lebih kecil */
+    }
+
+    .Admins-product-table th,
+    .Admins-product-table td {
+        padding: 8px; /* Mengurangi padding untuk tampilan yang lebih kecil */
+    }
+
+    button {
+        padding: 8px; /* Ukuran tombol lebih kecil */
+    }
+
+    .Admins-product-existing-category li {
+        flex-direction: row; /* Mengatur kategori dan tombol dalam kolom pada layar kecil */
+        align-items: flex-start;
+    }
+}
+
+/* Responsif untuk layar 480px */
+@media (max-width: 480px) {
+    .Admins-product-page {
+        margin-top: 30px; /* Mengurangi margin untuk layar kecil */
+        margin-bottom: 30px;
+        padding: 15px; /* Mengurangi padding */
+        max-width: 350px; /* Membatasi lebar maksimal */
+
+    }
+
+    .Admins-product-form div {
+        flex-direction: column; /* Input dan label dalam satu kolom */
+    }
+
+    .Admins-product-table th,
+    .Admins-product-table td {
+        padding: 3px; /* Padding lebih kecil pada layar kecil */
+        font-size: 10px; /* Ukuran font lebih kecil */
+    }
+
+    button {
+        padding: 6px; /* Tombol lebih kecil */
+    }
+
+    .Admins-product-existing-category li {
+        font-size: 12px; /* Ukuran font lebih kecil untuk kategori */
+        margin-bottom: 3px; /* Jarak antar kategori lebih kecil */
+    }
+}
+
+/* Admin.css */
+
+/* Container utama untuk login */
+.login-container {
+    display: flex; /* Gunakan flexbox */
+    flex-direction: column; /* Susun secara vertikal */
+    align-items: center; /* Pusatkan konten */
+    justify-content: center; /* Pusatkan konten */
+    height: 100vh; /* Ambil tinggi penuh viewport */
+    background-color: #f8f9fa; /* Warna latar belakang terang */
+}
+
+/* Gaya untuk judul */
+.login-container h2 {
+    margin-bottom: 20px; /* Jarak bawah judul */
+    font-size: 24px; /* Ukuran font judul */
+    color: #343a40; /* Warna teks gelap */
+}
+
+/* Gaya untuk pesan error */
+.error {
+    color: red; /* Warna teks merah untuk error */
+    margin-bottom: 10px; /* Jarak bawah pesan error */
+}
+
+/* Form login */
+.form-login {
+    display: flex; /* Gunakan flexbox */
+    flex-direction: column; /* Susun elemen secara vertikal */
+    width: 300px; /* Lebar form */
+    padding: 20px; /* Padding dalam form */
+    background-color: #ffffff; /* Warna latar belakang putih */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+}
+
+/* Gaya untuk label dan input */
+.form-login div {
+    margin-bottom: 15px; /* Jarak antar elemen form */
+}
+
+/* Gaya untuk label */
+.form-login label {
+    font-weight: bold; /* Tebalkan teks label */
+}
+
+/* Gaya untuk input */
+.form-login input {
+    padding: 10px; /* Padding dalam input */
+    border: 1px solid #ced4da; /* Border input */
+    border-radius: 5px; /* Sudut membulat input */
+    width: 100%; /* Lebar penuh untuk input */
+}
+
+/* Gaya untuk tombol login */
+.btn-login {
+    background-color: #007bff; /* Warna latar belakang biru */
+    color: white; /* Warna teks putih */
+    border: none; /* Hapus border */
+    border-radius: 5px; /* Sudut membulat */
+    padding: 10px; /* Padding dalam tombol */
+    cursor: pointer; /* Ubah kursor saat hover */
+    font-size: 16px; /* Ukuran font tombol */
+}
+
+/* Gaya saat hover pada tombol login */
+.btn-login:hover {
+    background-color: #0056b3; /* Warna saat hover */
+}
+
+/* Gaya untuk tombol kembali */
+.btn-back-login {
+    cursor: pointer; /* Ubah kursor saat hover */
+    font-size: 24px; /* Ukuran font tombol kembali */
+    position: absolute; /* Posisi absolut */
+    top: 20px; /* Jarak dari atas */
+    left: 20px; /* Jarak dari kiri */
+    color: #007bff; /* Warna ikon kembali */
+}
+
+.btn-back-login:hover {
+    color: #0056b3; /* Warna saat hover */
+}
+
